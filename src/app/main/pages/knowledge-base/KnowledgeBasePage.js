@@ -6,8 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+// import CardContent from "@material-ui/core/CardContent";
 import Divider from "@material-ui/core/Divider";
+import Button from "@material-ui/core/Button";
 
 
 
@@ -44,7 +45,7 @@ function KnowledgeBasePage() {
       <div
         className={clsx(
           classes.header,
-          "relative overflow-hidden flex flex-col flex-shrink-0 items-center justify-center text-center p-16 sm:p-24 h-200 sm:h-288"
+          "relative overflow-hidden flex flex-col flex-shrink-0 items-center justify-between text-center p-16 sm:p-24 h-200 sm:h-288"
         )}
       >
         <FuseAnimate
@@ -87,7 +88,16 @@ function KnowledgeBasePage() {
         </div>
         <CodeEditor className="flex:1"></CodeEditor>
       </div> */}
+      <div className="justify-start px-32" alignItems="center">
+        <Button 
+          type="submit"
+					variant="contained"
+					color="primary">
+          Submmit
+      </Button>
+      </div>
     </div>
+    
   );
 }
 

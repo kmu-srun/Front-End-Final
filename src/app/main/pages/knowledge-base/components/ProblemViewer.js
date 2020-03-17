@@ -63,22 +63,22 @@ export default class Test extends Component {
 
     return (
       <React.Fragment>
-        <div className="flex">
-          <p>
+        <div className="flex flex-col flex-shrink-0 sm:flex-row items-center justify-between py-24">
+          <p className="flex w-full sm:w-320 mb-16 sm:mb-0 mx-16">
             Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
           </p>
-          <ButtonGroup
+          {/* <ButtonGroup
+            className="flex w-full sm:w-320 mx-16"
             variant="contained"
             color="primary"
             aria-label="contained primary button group"
-          >
-            <Button disabled={pageNumber <= 1} onClick={this.previousPage}>
+          > */}
+          <Button disabled={pageNumber <= 1} onClick={this.previousPage} color="primary">
               PREVIOUS
             </Button>
-            <Button disabled={pageNumber >= numPages} onClick={this.nextPage}>
+          <Button disabled={pageNumber >= numPages} onClick={this.nextPage} color="primary">
               NEXT
             </Button>
-          </ButtonGroup>
         </div>
         <Document
           file="/assets/PDF/1.pdf"
